@@ -1,1 +1,581 @@
-
+{
+	"info": {
+		"_postman_id": "a4fa048a-acca-4f1d-8ee2-828539e87205",
+		"name": "flask101",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "sample",
+			"item": [
+				{
+					"name": "explicit_application_object",
+					"item": [
+						{
+							"name": "Hello World",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "request_processing",
+					"item": [
+						{
+							"name": "Form Request",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Flask",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/form",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"form"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Query Request",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "http://localhost:8080/query?name=Flask",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"query"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "Flask"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "JSON Request",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"name\": \"Flask\"}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/json",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"json"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "routing",
+					"item": [
+						{
+							"name": "Default method",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Explicit method",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/status",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"status"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Numerous Methods - POST",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"name\":\"Flask\"}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/intro",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"intro"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Numerous Methods - GET",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"name\":\"Flask\"}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/intro",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"intro"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Variable Path",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/intro2/Flask",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"intro2",
+										"Flask"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "demo",
+			"item": [
+				{
+					"name": "mean",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "0cae2f3d-7e7a-413b-b7c4-6a38c477cf50",
+								"exec": [
+									"var jsonData = pm.response.json();",
+									"",
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"response contains output\", function () {",
+									"    pm.expect(jsonData).to.have.property('output');",
+									"});",
+									"pm.test(\"response has expected output\", function() {",
+									"    pm.expect(jsonData.output).to.eql(3);",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"input\":[1,2,3,4,5]}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/mean",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mean"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "mean empty",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f06e1dd3-ef34-4c91-b6f1-6a4961db97e0",
+								"exec": [
+									"var jsonData = pm.response.json();",
+									"",
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"response contains output\", function () {",
+									"    pm.expect(jsonData).to.have.property('output');",
+									"});",
+									"pm.test(\"response has expected output\", function() {",
+									"    pm.expect(jsonData.output).to.eql(0);",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"input\":[]}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/mean",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mean"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "median - GET",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d213a1a6-80f9-487f-9354-b3baee4b9b04",
+								"exec": [
+									"var jsonData = pm.response.json();",
+									"",
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"response contains output\", function () {",
+									"    pm.expect(jsonData).to.have.property('output');",
+									"});",
+									"pm.test(\"response has expected output\", function() {",
+									"    pm.expect(jsonData.output).to.eql(2);",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/median?input=1,2,3,4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"median"
+							],
+							"query": [
+								{
+									"key": "input",
+									"value": "1,2,3,4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "median - POST",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a7c96908-5055-4687-8148-4147b739652c",
+								"exec": [
+									"var jsonData = pm.response.json();",
+									"",
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"response contains output\", function () {",
+									"    pm.expect(jsonData).to.have.property('output');",
+									"});",
+									"pm.test(\"response has expected output\", function() {",
+									"    pm.expect(jsonData.output).to.eql(3);",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/median?input=1,2,3,4,5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"median"
+							],
+							"query": [
+								{
+									"key": "input",
+									"value": "1,2,3,4,5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "mode",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "42907b70-72f0-4d84-9b39-e6a4724f37d8",
+								"exec": [
+									"var jsonData = pm.response.json();",
+									"",
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"response contains output\", function () {",
+									"    pm.expect(jsonData).to.have.property('output');",
+									"});",
+									"pm.test(\"response has expected output\", function() {",
+									"    pm.expect(jsonData.output).to.eql(1);",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "input",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "input",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "input",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "input",
+									"value": "4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/mode",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mode"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
