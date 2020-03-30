@@ -1,6 +1,15 @@
 # flask101
 Workshop introducing how to use Flask for API development
 
+PREREQUISITES:
+1. Download the Postman application at https://www.postman.com/downloads/
+2. Install Python
+  
+  MAC: `brew install python3`
+  
+  Windows: go to www.python.org/downloads/windows/ and download `Windows x86-64 executable installer`
+
+
 
 Please download Postman to run the test collection in the tests folder.
 
