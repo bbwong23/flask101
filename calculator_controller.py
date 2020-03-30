@@ -15,8 +15,8 @@ app =
 
 
 ###########################
-# 4. define route paths for the following functions with the specified path and method
-# 5. and parse the request to get the user_input given the request type
+# 3. define route paths for the following functions with the specified path and method
+# 4. and parse the request to get the user_input given the request type
 ###########################
 
 
@@ -59,5 +59,5 @@ def status():
 
 if __name__ == '__main__':
 	###########################
-	# 3. Start your flask app
+	# 5. Start your flask app
 	###########################
