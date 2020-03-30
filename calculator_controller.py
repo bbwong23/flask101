@@ -1,5 +1,6 @@
 ###########################
 # 1. import flask library 
+# HINT: sample/request_processing.py
 ###########################
 import service.calculator as calculator
 from http import HTTPStatus
@@ -9,6 +10,7 @@ from flask import jsonify
 
 ###########################
 # 2. initialize your Flask application object
+# HINT: sample/explicit_application_object.py
 ###########################
 app = 
 
@@ -16,7 +18,9 @@ app =
 
 ###########################
 # 3. define route paths for the following functions with the specified path and method
+# HINT: sample/routing.py
 # 4. and parse the request to get the user_input given the request type
+# HINT: sample/request_processing.py
 ###########################
 
 
@@ -60,4 +64,5 @@ def status():
 if __name__ == '__main__':
 	###########################
 	# 5. Start your flask app
+	# HINT: sample/explicit_application_object.py
 	###########################
